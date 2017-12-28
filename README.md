@@ -15,7 +15,7 @@ CREATE TABLE `link` (
   `views` int(11) NOT NULL,
   `created` varchar(24) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 ```
 
 Либо импортируем файл db.sql

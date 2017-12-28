@@ -4,7 +4,7 @@
 # Подключение
 
 1. В файле `config/mysql.php` изменить данные на подключение к базе данных MySQL (MariaDB)
-2. Создаем базу данных.
+2. Создаем таблицу в базе данных
 
 ```mysql
 CREATE TABLE `link` (
@@ -18,7 +18,7 @@ CREATE TABLE `link` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8_general_ci;
 ```
 
-Либо импортируем файл db.sql
+* Либо импортируем файл db.sql
 # Использование
 
 1. Вставляете ссылку в поле

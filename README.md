@@ -22,9 +22,9 @@ CREATE TABLE `link` (
 # Использование
 
 1. Вставляете ссылку в поле
-![](img-gh/img-1.png)
+![](img-gh/img-1.PNG)
 
 2. Просматриваете статистику ссылки
-![](img-gh/img-2.png)
+![](img-gh/img-2.PNG)
 
 

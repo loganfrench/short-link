@@ -15,7 +15,7 @@
 	do {
 		for ($i = 0; $i < rand(2, 6); $i++) $key .= substr('ABDEFGHKNQRSTYZ123456789', rand(1, 24)-1, 1);
 	}
-	while(mysql_num_rows(mysql_query("SELECT * FROM `link` WHERE `parse` = '".$key."'")) > 0);
+	while(mysql_num_rows(mysql_query("SELECT * FROM `link` WHERE `key` = '".$key."'")) > 0);
 	
 	if(mysql_query("INSERT INTO `link` (`link`, `key`, `by`, `created`) VALUES ('".$link."', '".$key."', '".$ip."', '".time()."')")) die(json_encode(array('status' => true, 'link' => 'key' => "http://".$_SERVER['SERVER_NAME']."/".$key, 'created' => date('d.m.Y H:i:s'))));
 	else exit(json_encode(array('status' => false, 'code' => mysql_error())));

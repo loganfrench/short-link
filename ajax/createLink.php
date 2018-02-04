@@ -17,6 +17,6 @@
 	}
 	while(mysql_num_rows(mysql_query("SELECT * FROM `link` WHERE `key` = '".$key."'")) > 0);
 	
-	if(mysql_query("INSERT INTO `link` (`link`, `key`, `by`, `created`) VALUES ('".$link."', '".$key."', '".$ip."', '".time()."')")) die(json_encode(array('status' => true, 'link' => 'key' => "http://".$_SERVER['SERVER_NAME']."/".$key, 'created' => date('d.m.Y H:i:s'))));
+	if(mysql_query("INSERT INTO `link` (`link`, `key`, `by`, `created`) VALUES ('".$link."', '".$key."', '".$ip."', '".time()."')")) die(json_encode(array('status' => true, 'key' => "http://".$_SERVER['SERVER_NAME']."/".$key, 'created' => date('d.m.Y H:i:s'))));
 	else exit(json_encode(array('status' => false, 'code' => mysql_error())));
 ?>
